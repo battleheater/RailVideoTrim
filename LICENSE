@@ -2,6 +2,177 @@
 
 Copyright (c) 2026 battleheater
 
+**Language / 言語**
+
+[🇬🇧 English](#english) | [🇯🇵 日本語](#japanese)
+
+## English
+
+## 1. Overview
+
+RailVideoTrim (hereinafter referred to as “the Software”) is software designed to automatically detect the desired segments from videos recorded during railway filming or similar activities by analyzing changes in the footage, and to extract those segments.
+
+The Software is provided free of charge.
+
+This License sets forth the terms and conditions for using the Software.
+
+---
+
+## 2. Permitted Use
+
+Provided you comply with the terms of this license, the following uses are permitted free of charge:
+
+- Use of the Software by individuals for their own personal purposes
+- Use of the Software by corporations or organizations for business purposes
+- Processing videos filmed or produced for commercial purposes using the Software
+- Promoting the Software
+- Posting a link to the Software’s official distribution page
+
+You are free to use, publish, sell, or otherwise dispose of video files created using this software.
+
+---
+
+## 3. Redistribution
+
+Redistributing the executable files, installers, or other distribution materials of this software to third parties is prohibited.
+
+This includes the following actions:
+
+- Distributing this software on your own website or blog
+- Distributing this software using file-sharing services
+- Uploading distribution files for this software to social media, message boards, forums, etc.
+- Directly providing this software to third parties as a file
+- Distributing media containing this software to third parties
+
+As a general rule, please download this software from the official GitHub repository and official GitHub Releases.
+
+If a third party wishes to introduce this software, please do not repost the distribution files; instead, provide a link to the official distribution page.
+
+---
+
+## 4. Source Code
+
+The source code for this software is not publicly available.
+
+The following actions regarding this software are prohibited:
+
+- Obtaining, extracting, or disclosing the source code
+- Providing the source code to third parties
+- Performing reverse engineering
+- Decompiling or disassembling the software
+- Any other unauthorized acquisition of the internal implementation of this software
+
+However, this restriction does not apply to the extent permitted by applicable law.
+
+---
+
+## 5. Modifications and Derivative Works
+
+You are prohibited from modifying, altering, adapting, or otherwise creating derivative works of this software.
+
+Furthermore, you are prohibited from publishing, distributing, selling, or providing to third parties any modified version of this software or any derivative works created based on this software.
+
+---
+
+## 6. Incorporation into Other Software
+
+You are prohibited from incorporating this Software or any part thereof into third-party software, applications, services, web services, or other products.
+
+In particular, you are prohibited from creating software that provides functions equivalent to or similar to those of this Software by utilizing its functions, algorithms, code, or other components, and providing such software to third parties.
+
+---
+
+## 7. Sale and Commercial Redistribution
+
+Selling this software itself is prohibited.
+
+Furthermore, it is prohibited to modify, adapt, reconfigure, or combine this software with other software and then sell or provide it as a product or service.
+
+However, videos and content created or processed using this software may be used for commercial purposes
+
+---
+
+## 8. Copyright
+
+All copyrights and other rights related to this software and its accompanying materials belong to the copyright holder.
+
+All rights not expressly granted under this license are reserved by the copyright holder.
+
+---
+
+## 9. No Warranty
+
+This software is provided “AS IS.”
+
+The copyright holder makes no warranties, express or implied, regarding this software.
+
+This includes, but is not limited to, the following:
+
+- Fitness for a particular purpose
+- Accuracy
+- Completeness
+- Proper detection and extraction of videos
+- Compatibility with all video formats
+- Freedom from errors
+- Prevention of data loss
+
+Use of this software is at the user’s own risk.
+
+---
+
+## 10. Disclaimer
+
+To the fullest extent permitted by law, the copyright holder shall not be liable for any damages arising from the use or inability to use this software.
+
+This includes, but is not limited to, the following:
+
+- Loss of data such as videos, images, and audio
+- File corruption
+- Loss of data on storage devices
+- Business losses
+- Loss of profits
+- Other direct or indirect damages
+
+For important data, please verify the results of processing by this software before deleting the original files.
+
+---
+
+## 11. License Changes
+
+The copyright holder may change the license terms for this software in the future.
+
+However, for specific versions of this software that have already been acquired, the license terms in effect at the time of acquisition shall apply.
+
+---
+
+## 12. License Violations
+
+If you violate this license, the rights granted under this license will automatically terminate.
+
+If you become aware of a license violation, you must immediately cease using and distributing this software.
+
+---
+
+## 13. Miscellaneous
+
+Any actions not expressly permitted by this license require prior written permission from the copyright holder.
+
+Please direct any inquiries regarding this license to the software’s official GitHub repository.
+
+
+---
+
+**RailVideoTrim**
+
+Copyright (c) 2026 battleheater
+
+RailVideoTrim is provided free of charge for personal, organizational, and commercial use subject to the terms of this license.
+
+
+
+
+## Japanese
+
 ## 1. 概要
 
 RailVideoTrim（以下「本ソフトウェア」）は、鉄道撮影などで録画した動画から、映像の変化を利用して必要な区間を自動的に検出し、動画を切り出すためのソフトウェアです。
