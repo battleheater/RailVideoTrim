@@ -22,8 +22,11 @@ RailVideoTrim automates these tasks.
 
 ### Just dump multiple videos in at once and press a button.
 
-RailVideoTrim automatically analyzes the videos,
+You don't even have to decide which videos to trim.
 
+Whether the videos are long or short, RailVideoTrim automatically analyzes them and
+
+* automatically selects only the long videos worth trimming for processing
 * Detects changes in the footage caused by trains and other subjects
 * Automatically identifies sections where the subject is likely to appear
 * Outputs only the necessary segments without any loss of quality
@@ -231,8 +234,11 @@ RailVideoTrimは、これらの作業を自動化します。
 
 ### 複数の動画をまとめて放り込んで、ボタンを押すだけ。
 
-RailVideoTrimが動画を自動解析し、
+どの動画をカットすべきか、自分で選ぶ必要さえありません。
 
+長い動画も短い動画も関係なく、RailVideoTrimが動画を自動解析し、
+
+* カットする価値がある尺が長い動画のみを処理対象として自動選別
 * 列車などによる映像の変化を検出
 * 被写体が映っていると思われる区間を自動判定
 * 必要な区間だけを無劣化で出力
