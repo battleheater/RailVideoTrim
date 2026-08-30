@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RailVideoTrim - 鉄道動画自動トリミング</title>
+
+    <meta name="description"
+          content="大量の鉄道動画を自動解析し、必要な区間だけを無劣化で抽出する動画自動トリミングツール。AI不使用・完全オフライン。">
+
+    <style>
+        body {
+            font-family: Arial, "Noto Sans JP", sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 60px;
+        }
+
+        .tagline {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .lead {
+            font-size: 18px;
+        }
+
+        .download {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 15px 35px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>RailVideoTrim</h1>
+
+    <div class="tagline">
+        大量の動画を、1本ずつ確認する必要はありません。
+    </div>
+
+    <p class="lead">
+        鉄道撮影などで録画した大量の動画を自動解析し、
+        列車などによる映像の変化がある区間を検出。
+        必要な部分だけを無劣化で切り出します。
+    </p>
+
+    <a class="download"
+       href="https://github.com/battleheater/RailVideoTrim/releases/latest/download/RailVideoTrim.exe">
+        RailVideoTrimをダウンロード
+    </a>
+
+    <p>
+        Windows / AI不使用 / 完全オフライン
+    </p>
+
+    <h2>RailVideoTrimとは？</h2>
+
+    <p>
+        「1本の長い動画を短くする」ためのツールではありません。
+    </p>
+
+    <p>
+        <strong>
+            「大量の動画を、自分で1本ずつ確認する作業をなくす」
+        </strong>
+        ためのツールです。
+    </p>
+
+    <h2>主な特徴</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <strong>大量の動画を一括処理</strong>
+            <p>
+                複数の動画をまとめて投入して、自動で解析できます。
+            </p>
+        </div>
+
+        <div class="feature">
+            <strong>AI不使用</strong>
+            <p>
+                AI画像認識やクラウドAIサービスを使用していません。
+            </p>
+        </div>
+
+        <div class="feature">
+            <strong>完全オフライン</strong>
+            <p>
+                動画解析はPC上で完結します。
+            </p>
+        </div>
+
+        <div class="feature">
+            <strong>無劣化</strong>
+            <p>
+                可能な限り再エンコードせず、無劣化で切り出します。
+            </p>
+        </div>
+
+        <div class="feature">
+            <strong>ストレージを節約</strong>
+            <p>
+                不要な録画時間を削減し、保存容量の節約につなげます。
+            </p>
+        </div>
+
+    </div>
+
+    <h2>GitHub</h2>
+
+    <p>
+        ソースコード、詳しい使い方、開発情報はこちら。
+    </p>
+
+    <a href="https://github.com/battleheater/RailVideoTrim">
+        GitHub Repository
+    </a>
+
+    <footer>
+        <p>
+            RailVideoTrim
+        </p>
+    </footer>
+
+</div>
+
+</body>
+</html>
