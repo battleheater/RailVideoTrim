@@ -90,7 +90,7 @@ That is the purpose of RailVideoTrim.
 * Does not modify the original files in any way
 * Allows you to add custom margins before and after detected subject segments when saving
 * Can process multiple videos at once
-* If a subject is detected multiple times within a single video, each instance is output to a separate file
+* If a subject is detected multiple times in a single video, only the segment with the highest subject score is automatically selected and output (it is also possible to output all detected segments).
 * Supports many formats, including MP4, MTS, and MOV
 * Preserves tracks other than video and audio whenever possible
 * Selects between MP4 and MOV based on compatibility with audio formats and other factors
@@ -146,7 +146,9 @@ The detected segments are extracted with the specified before and after margins 
 
 ## Output Files
 
-If multiple segments are detected from a single video, they will be saved with sequential file names.
+If multiple segments are detected in a single video, by default, the system identifies the segment with the most significant change in the scene as the one containing the subject and outputs only that segment.
+
+However, if you check the “Output all segments” checkbox, all segments will be output as separate files.
 
 Example:
 
@@ -304,7 +306,7 @@ RailVideoTrimが減らしたいのは、動画の長さだけではありませ�
 * 原本のファイルは一切変更しません
 * 被写体を検出した区間の前後に任意の余白を追加して保存可能
 * 複数の動画をまとめて処理可能
-* 1本の動画に複数回被写体が検出された場合は、それぞれ別ファイルに出力
+* 1本の動画に複数回被写体が検出された場合は、最も被写体スコアが高い部分だけを自動選択して出力（全ての検出部分を出力することも可能）
 * MP4 / MTS /MOVなど多くのフォーマットに対応
 * ビデオ・音声以外のトラックも、可能な限り保持
 * 音声形式などの互換性に応じてMP4 / MOVを使い分け
@@ -343,11 +345,13 @@ FFmpegがない場合は、「FFmpegを自動インストール」のボタン�
 必要に応じて解析条件を変更します。
 
 「前後余白」は、被写体が映っていると判断した区間の前後に、指定した秒数の余白が追加されます。
-20-30秒前後が自然かと思います。
-また「前後余白」の2倍より短い動画は、カットする部分がないので処理しません。
 
-別途「これより短い動画は処理しない」という設定もあります。
-すなわち、「前後余白」の2倍、または「これより短い動画は処理しない」より短い動画は処理しません。
+20-30秒前後が自然かと思いますが、お好みに応じて変更してください。
+
+また「前後余白」の2倍より短い動画は、必然的にカットする部分がないので処理しません。
+
+別途「これより短い動画は処理しない」という設定もあります。  
+すなわち、「前後余白」の2倍、または「これより短い動画は処理しない」、どちらかより短い動画は処理しません。
 
 その他のパラメーターは変更すると全く出力結果が変わってしまいますので、**基本的にデフォルト設定のまま使用することをお勧めします。**
 パラメーターの意味は入力欄にマウスポインタを乗せると表示されますので、興味がある方は参考にしてください。
@@ -360,7 +364,9 @@ FFmpegがない場合は、「FFmpegを自動インストール」のボタン�
 
 ## 出力ファイル
 
-1本の動画から複数の区間が検出された場合は、連番で保存されます。
+1本の動画から複数の区間が検出された場合、デフォルトでは最も画面の変化が大きい区間を被写体が映っている区間と判定し、その区間だけを出力します。
+
+ただし、「複数区間を全て出力」のチェックボックスをONにした場合は、全ての区間を個別のファイルに出力します。
 
 例：
 
