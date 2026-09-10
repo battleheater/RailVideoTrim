@@ -1,4 +1,4 @@
-# RailVideoTrim
+# RailVideoTrim v1.1.0
 
 **Language / 言語**
 
@@ -102,7 +102,6 @@ RailVideoTrimが減らしたいのは、動画の長さだけではありませ�
 
 ### 対応OS
 
-* Windows 10
 * Windows 11
 
 ### 必要なソフトウェア
@@ -121,10 +120,14 @@ FFmpegがない場合は、「FFmpegを自動インストール」のボタン�
 処理したい動画ファイル、または動画が入っているフォルダを指定、またはドラッグ＆ドロップします。
 複数の動画をまとめて選択することもできます。
 
+フォルダを追加する場合は、「サブフォルダを含む」をONにすると、指定したフォルダ以下を再帰的に検索して、サブフォルダ内の対応動画ファイルも処理対象にできます。
+OFFの場合は、指定したフォルダの直下にある対応動画ファイルだけが処理対象になります。
+
 ### 2. 出力先を指定
 
 出力ファイルの保存先フォルダを指定します。
-保存先が空欄の場合、自動的に入力動画と同じフォルダに「trim」というサブフォルダを作ってそこに保存します。
+「入力ファイルと同じフォルダ内の\\trim」がONの場合は、各入力動画の親フォルダに「trim」フォルダを作成して、そこに保存します。サブフォルダを含めて検索した場合も、各動画の親フォルダが基準になります。
+OFFの場合は、「出力フォルダ」で指定した1つのフォルダに保存します。
 
 ### 3. パラメータを設定
 
@@ -179,10 +182,12 @@ FFmpegがない場合は、「FFmpegを自動インストール」のボタン�
 * 俯瞰撮影など被写体が小さい動画
 ・カメラブレが激しい動画
 * 木々の揺れなど、映像全体に継続的な変化がある
+* 1カットに複数の列車が映っている動画
+* カットの冒頭からすでに列車が映っている動画
 
-といった状況では、被写体が検出されなかったり、逆に何も映っていない区間が出力される場合があります。
+といった状況では、適切にカットされない場合があります。
 
-作者の体感では、うまくカットできる動画は7割程度ですが、それでも自動で大幅にストレージを節約できるのは価値があると思います。
+作者の体感では、うまくカットできる動画は8割程度ですが、それでも自動で大幅にストレージを節約できるのは価値があると思います。
 
 また、**列車を確実に検出できることを保証するものではありません。**
 正常に出力されたことを確認してから、原本のファイルを削除することを強くおすすめします。
@@ -323,7 +328,6 @@ That is the purpose of RailVideoTrim.
 
 ### Supported Operating Systems
 
-* Windows 10
 * Windows 11
 
 ### Required Software
@@ -345,7 +349,11 @@ You can also select multiple videos at once.
 ### 2. Specify Output Location
 
 Specify the folder where the output files will be saved.
-If the output location is left blank, a subfolder named “trim” will be automatically created in the same folder as the input video, and the files will be saved there.
+When “Use a \\trim folder next to each input file” is enabled, a “trim” subfolder is automatically created in the parent folder of each input video, and the files are saved there. When subfolder search is enabled, each video's parent folder is used as the base independently.
+When it is disabled, all output files are saved in the single folder specified in “Output folder”.
+
+When adding a folder, enable “Include subfolders” to recursively search the specified folder and process supported video files found in its subfolders. When disabled, only supported video files directly inside the specified folder are processed.
+
 
 ### 3. Set Parameters
 
@@ -397,11 +405,13 @@ Therefore, compared to standard video conversion, **there is no loss in image qu
 * Videos shot at night or in other low-light, low-contrast conditions
 * Videos where the subject is small, such as those shot from a bird’s-eye view
 ・Videos with severe camera shake
-* Videos with continuous movement across the entire frame, such as swaying trees
+* Videos with continuous movement throughout the footage, such as swaying trees
+* Videos where multiple trains appear in a single shot
+* Videos where a train is already visible at the beginning of a shot
 
-In such situations, the subject may not be detected, or conversely, sections with no subject may be included in the output.
+In situations like these, the video may not be cut appropriately.
 
-Based on the author’s experience, the tool successfully trims about 70% of videos, but even so, the ability to automatically save a significant amount of storage space is still valuable.
+Based on the author’s experience, the system successfully cuts about 80% of videos, but even so, the ability to automatically save a significant amount of storage space is still valuable.
 
 Additionally, **we do not guarantee that trains will be detected reliably.**
 We strongly recommend that you verify that the output is correct before deleting the original file.
