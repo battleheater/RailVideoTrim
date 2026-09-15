@@ -1,4 +1,4 @@
-# RailVideoTrim v1.1.0
+# RailVideoTrim
 
 **Language / 言語**
 
@@ -6,112 +6,44 @@
 
 ## Japanese
 
-## 大量の動画を、1本ずつ確認する必要はありません。
-
-鉄道撮影では、列車が来るまで長時間カメラを回し続けることがあります。
-
-問題は、撮影後です。
-
-**「この大量の動画の、どこに列車が映っているのか？」**
-
-これを1本ずつ再生して確認し、必要な部分を探してカットするのは、とても面倒で時間がかかる作業です。
-
-さらに、不要な録画部分をそのまま保存しておけば、**高価なストレージ容量もどんどん消費していきます。**
-
-RailVideoTrimは、これらの作業を自動化します。
-
-### 複数の動画をまとめて放り込んで、ボタンを押すだけ。
-
-どの動画をカットすべきか、自分で選ぶ必要さえありません。
-
-長い動画も短い動画も関係なく、RailVideoTrimが動画を自動解析し、
-
-* カットする価値がある尺が長い動画のみを処理対象として自動選別
-* 列車などによる映像の変化を検出
-* 被写体が映っていると思われる区間を自動判定
-* 必要な区間だけを無劣化で出力
-* 大量の動画をまとめて一括処理
-
-します。
-
-つまり、
-
-> **「1本の長い動画を短くする」ためのツールではありません。**
-
-> **「大量の動画を、自分で1本ずつ確認する作業をなくす」ためのツールです。**
-
-そして、不要な録画時間を削除することで、**大切な動画を必要な部分だけ残し、ストレージ容量の節約にもつなげられます。**
-
-撮影した動画をまとめてフォルダに入れたら、あとはRailVideoTrimに任せてください。
-
----
-
-## AIは使用していません
-
-RailVideoTrimは、AIによる画像認識やクラウドAIサービスを使用していません。
-
-独自の画像解析と判定ロジックによって、動画内の映像変化を解析し、必要な区間を検出します。
-
-そのため、
-
-* AIへの動画アップロードが不要
-* AIによる学習や情報漏洩を心配する必要がない
-* インターネット接続がなくても使用できる
-* 撮影した動画を外部サービスに送信しない
-
-という特徴があります。
-
-## 完全オフラインで動作
-
-RailVideoTrimの動画解析は、**お使いのPC上だけで完結します。**
-
-インターネットに接続して動画を解析する必要はありません。
-
-撮影した大切な鉄道動画を、外部サーバーへアップロードすることなく、自分のPCだけで処理できます。
-
----
-
-## RailVideoTrimが目指すもの
-
-RailVideoTrimが減らしたいのは、動画の長さだけではありません。
-
-**撮影後に大量の動画を1本ずつ確認する「時間」と「手間」。**
-
-そして、**必要のない録画部分を保存し続けることで消費される「ストレージ容量」**です。
-
-撮影した動画をまとめて投入して、あとは処理が終わるのを待つ。
-
-**手作業による確認時間を減らし、必要な映像だけを残して、ストレージも効率よく使う。**
-
-それがRailVideoTrimの目的です。
-
-
-## 主な特徴
-
-* **FFmpegの `-c copy` による無劣化カット**
-* 原本のファイルは一切変更しません
-* 被写体を検出した区間の前後に任意の余白を追加して保存可能
-* 複数の動画をまとめて処理可能
-* 1本の動画に複数回被写体が検出された場合は、最も被写体スコアが高い部分だけを自動選択して出力（全ての検出部分を出力することも可能）
-* MP4 / MTS /MOVなど多くのフォーマットに対応
-* ビデオ・音声以外のトラックも、可能な限り保持
-* 音声形式などの互換性に応じてMP4 / MOVを使い分け
-
-
 ## 動作環境
 
 ### 対応OS
 
 * Windows 11
 
+### 対応フォーマット
+
+* MP4
+* MOV
+* mts
+* 上記以外は未確認ですが、FFmpegが対応しているフォーマットであれば処理可能な可能性があります
+
+
+### インストール方法
+
+ダウンロードしたZIPファイルを解凍し、RailVideoTrim.exeをダブルクリックするだけで起動します。
+
+### Windows SmartScreenについて
+
+初回起動時に「WindowsによってPCが保護されました」
+という警告が表示される場合があります。
+
+これはRailVideoTrimが新しいアプリであり、
+Microsoft Defender SmartScreenによる十分な評価が
+まだ蓄積されていないためです。
+
+公式サイトからダウンロードしたファイルであることを
+確認したうえで、「詳細情報」→「実行」をクリックすると起動できます。
+
 ### 必要なソフトウェア
 
 * FFmpeg
 
 FFmpegがインストールされている場合は、その実行ファイルを自動的に検索して使用します。  
-FFmpegがない場合は、「FFmpegを自動インストール」のボタンを押下すると、自動インストールが可能です。  
-自動インストールにはWinGetコマンドを使用しますので、Wingetコマンドもない場合はWinGetをインストールしてください。  
-または、ご自分で個別にFFmpegをダウンロードしてインストールすることも可能です。
+FFmpegがない場合は、「FFmpegを自動インストール」のボタンを押下すると、公式サイトからFFmpegのZIPファイルをダウンロードし、自動インストールが可能です。（この方法を推奨します）  
+別途WinGetコマンドを使用して自動インストールすることも可能です。  
+または、ご自分でFFmpegのフォルダを指定して使用するすることも可能です。
 
 ## 基本的な使い方
 
@@ -190,6 +122,7 @@ OFFの場合は、「出力フォルダ」で指定した1つのフォルダに�
 作者の体感では、うまくカットできる動画は8割程度ですが、それでも自動で大幅にストレージを節約できるのは価値があると思います。
 
 また、**列車を確実に検出できることを保証するものではありません。**
+
 正常に出力されたことを確認してから、原本のファイルを削除することを強くおすすめします。
 
 ## FFmpegについて
@@ -222,6 +155,7 @@ RailVideoTrimを気に入っていただけましたら、開発を応援して�
 
 継続的な開発・改善の励みになります。
 
+- [Amazonギフト券](https://www.amazon.co.jp/dp/B004N3APGO?th=1)
 - [OFUSE](https://ofuse.me/battleheater)
 - [Ko-fi](https://ko-fi.com/battleheater)
 - [GitHub Sponsors](https://github.com/sponsors/battleheater)
@@ -234,110 +168,43 @@ RailVideoTrimを気に入っていただけましたら、開発を応援して�
 
 ## English
 
-## You don’t have to review a large number of videos one by one.
-
-When filming trains, you often have to keep the camera rolling for long periods until a train arrives.
-
-The problem comes after you’ve finished filming.
-
-**“Where in all these videos does the train actually appear?”**
-
-Playing back each video one by one to find and cut out the necessary parts is a very tedious and time-consuming task.
-
-Furthermore, if you keep saving the unnecessary footage, **it will rapidly consume your expensive storage space.**
-
-RailVideoTrim automates these tasks.
-
-### Just dump multiple videos in at once and press a button.
-
-You don't even have to decide which videos to trim.
-
-Whether the videos are long or short, RailVideoTrim automatically analyzes them and
-
-* automatically selects only the long videos worth trimming for processing
-* Detects changes in the footage caused by trains and other subjects
-* Automatically identifies sections where the subject is likely to appear
-* Outputs only the necessary segments without any loss of quality
-* Batch-processes large numbers of videos at once
-
-In other words,
-
-> **This is not a tool for “shortening a single long video.”**
-
-> **It is a tool designed to “eliminate the need to manually review large numbers of videos one by one.”**
-
-Furthermore, by deleting unnecessary recording time, **you can keep only the essential parts of your important videos, which also helps save storage space.**
-
-Simply place your recorded videos into a folder, and let RailVideoTrim handle the rest.
-
----
-
-## No AI is used
-
-RailVideoTrim does not use AI-based image recognition or cloud AI services.
-
-Using its proprietary image analysis and decision-making logic, it analyzes changes in the video footage to detect the necessary segments.
-
-As a result,
-
-* No need to upload videos to AI
-* No need to worry about AI training or data leaks
-* Can be used without an internet connection
-* Recorded videos are not sent to external services
-
-These are its key features.
-
-## Operates Completely Offline
-
-RailVideoTrim’s video analysis is **completed entirely on your PC.**
-
-There is no need to connect to the internet to analyze videos.
-
-You can process your precious railway videos on your own PC without uploading them to external servers.
-
----
-
-## What RailVideoTrim Aims to Achieve
-
-RailVideoTrim aims to reduce more than just video length.
-
-**It also aims to reduce the “time” and “effort” spent reviewing large volumes of footage one video at a time after filming.**
-
-And it aims to reduce the **“storage space” consumed by continuing to save unnecessary portions of your recordings.**
-
-Simply import all your recorded videos at once and wait for processing to finish.
-
-**Reduce the time spent on manual review, keep only the footage you need, and use your storage space efficiently.**
-
-That is the purpose of RailVideoTrim.
-
-
-## Key Features
-
-* **Lossless trimming using FFmpeg’s `-c copy` option**
-* Does not modify the original files in any way
-* Allows you to add custom margins before and after detected subject segments when saving
-* Can process multiple videos at once
-* If a subject is detected multiple times in a single video, only the segment with the highest subject score is automatically selected and output (it is also possible to output all detected segments).
-* Supports many formats, including MP4, MTS, and MOV
-* Preserves tracks other than video and audio whenever possible
-* Selects between MP4 and MOV based on compatibility with audio formats and other factors
-
-
 ## System Requirements
 
 ### Supported Operating Systems
 
 * Windows 11
 
+### How to Install
+
+Simply unzip the downloaded ZIP file and double-click RailVideoTrim.exe to launch the program.
+
+### Supported Formats
+
+* MP4
+* MOV
+* mts
+* Formats other than those listed above have not been verified, but they may be processable if they are supported by FFmpeg.
+
+### About Windows SmartScreen
+
+When you launch the program for the first time, you may see a warning that says
+“Windows has protected your PC.”
+
+This is because RailVideoTrim is a new app,
+and Microsoft Defender SmartScreen has not yet accumulated
+enough evaluation data for it.
+
+After confirming that the file was downloaded from the official website,
+click “More info” → “Run” to launch the program.
+
 ### Required Software
 
 * FFmpeg
 
-If FFmpeg is already installed, the program will automatically locate and use its executable file.
-If FFmpeg is not installed, you can install it automatically by clicking the “Automatically Install FFmpeg” button.
-The automatic installation uses the WinGet command, so if you do not have WinGet, please install it.
-Alternatively, you can download and install FFmpeg manually.
+If FFmpeg is already installed, the program will automatically search for and use its executable file.
+If FFmpeg is not installed, clicking the “Automatically Install FFmpeg” button will download the FFmpeg ZIP file from the official website and install it automatically. (This method is recommended.)
+You can also use the WinGet command to perform an automatic installation.
+Alternatively, you can specify the FFmpeg folder yourself.
 
 ## Basic Usage
 
@@ -353,7 +220,6 @@ When “Use a \\trim folder next to each input file” is enabled, a “trim” 
 When it is disabled, all output files are saved in the single folder specified in “Output folder”.
 
 When adding a folder, enable “Include subfolders” to recursively search the specified folder and process supported video files found in its subfolders. When disabled, only supported video files directly inside the specified folder are processed.
-
 
 ### 3. Set Parameters
 
@@ -413,6 +279,7 @@ In situations like these, the video may not be cut appropriately.
 
 Based on the author’s experience, the system successfully cuts about 80% of videos, but even so, the ability to automatically save a significant amount of storage space is still valuable.
 
+
 Additionally, **we do not guarantee that trains will be detected reliably.**
 We strongly recommend that you verify that the output is correct before deleting the original file.
 
@@ -445,6 +312,7 @@ If you like RailVideoTrim, we’d appreciate your support for its development.
 
 Your support encourages us to continue developing and improving the project.
 
+- [Amazon Gift Card](https://www.amazon.co.jp/dp/B004N3APGO?th=1)
 - [OFUSE](https://ofuse.me/battleheater)
 - [Ko-fi](https://ko-fi.com/battleheater)
 - [GitHub Sponsors](https://github.com/sponsors/battleheater)
