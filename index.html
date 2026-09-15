@@ -92,6 +92,26 @@
             margin: 0 auto;
             font-size: 18px;
         }
+        
+        .screenshot {
+           max-width: 900px;
+           margin: 30px auto 10px;
+           text-align: center;
+       }
+
+       .screenshot img {
+           display: block;
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+       }
+       
+       .screenshot-caption {
+           margin: 8px 0 0;
+           font-size: 14px;
+           color: #666;
+       }
 
         .download {
             display: inline-block;
@@ -263,8 +283,14 @@
             列車などによる映像の変化がある区間を検出。
             必要な部分だけを無劣化で切り出します。
         </p>
-        <img src="images/railvideotrim-main.png"
-         alt="RailVideoTrimのメイン画面">
+        
+        <div class="screenshot">
+            <img src="images/railvideotrim-main.png"
+                 alt="RailVideoTrimのメイン画面">
+            <p class="screenshot-caption">
+                RailVideoTrimのメイン画面
+            </p>
+        </div>
       
         <a class="download"
            href="https://github.com/battleheater/RailVideoTrim/releases/latest/download/RailVideoTrim.zip"
