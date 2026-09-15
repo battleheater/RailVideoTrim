@@ -1,4 +1,4 @@
-# RailVideoTrim
+# RailVideoTrim v1.2.0
 
 **Language / 言語**
 
@@ -6,13 +6,105 @@
 
 ## Japanese
 
+## 大量の動画を、1本ずつ確認する必要はありません。
+
+鉄道撮影では、列車が来るまで長時間カメラを回し続けることがあります。
+
+問題は、撮影後です。
+
+**「この大量の動画の、どこに列車が映っているのか？」**
+
+これを1本ずつ再生して確認し、必要な部分を探してカットするのは、とても面倒で時間がかかる作業です。
+
+さらに、不要な録画部分をそのまま保存しておけば、**高価なストレージ容量もどんどん消費していきます。**
+
+RailVideoTrimは、これらの作業を自動化します。
+
+### 複数の動画をまとめて放り込んで、ボタンを押すだけ。
+
+どの動画をカットすべきか、自分で選ぶ必要さえありません。
+
+長い動画も短い動画も関係なく、RailVideoTrimが動画を自動解析し、
+
+* カットする価値がある尺が長い動画のみを処理対象として自動選別
+* 列車などによる映像の変化を検出
+* 被写体が映っていると思われる区間を自動判定
+* 必要な区間だけを無劣化で出力
+* 大量の動画をまとめて一括処理
+
+します。
+
+つまり、
+
+> **「1本の長い動画を短くする」ためのツールではありません。**
+
+> **「大量の動画を、自分で1本ずつ確認する作業をなくす」ためのツールです。**
+
+そして、不要な録画時間を削除することで、**大切な動画を必要な部分だけ残し、ストレージ容量の節約にもつなげられます。**
+
+撮影した動画をまとめてフォルダに入れたら、あとはRailVideoTrimに任せてください。
+
+---
+
+## AIは使用していません
+
+RailVideoTrimは、AIによる画像認識やクラウドAIサービスを使用していません。
+
+独自の画像解析と判定ロジックによって、動画内の映像変化を解析し、必要な区間を検出します。
+
+そのため、
+
+* AIへの動画アップロードが不要
+* AIによる学習や情報漏洩を心配する必要がない
+* インターネット接続がなくても使用できる
+* 撮影した動画を外部サービスに送信しない
+
+という特徴があります。
+
+## 完全オフラインで動作
+
+RailVideoTrimの動画解析は、**お使いのPC上だけで完結します。**
+
+インターネットに接続して動画を解析する必要はありません。
+
+撮影した大切な鉄道動画を、外部サーバーへアップロードすることなく、自分のPCだけで処理できます。
+
+---
+
+## RailVideoTrimが目指すもの
+
+RailVideoTrimが減らしたいのは、動画の長さだけではありません。
+
+**撮影後に大量の動画を1本ずつ確認する「時間」と「手間」。**
+
+そして、**必要のない録画部分を保存し続けることで消費される「ストレージ容量」**です。
+
+撮影した動画をまとめて投入して、あとは処理が終わるのを待つ。
+
+**手作業による確認時間を減らし、必要な映像だけを残して、ストレージも効率よく使う。**
+
+それがRailVideoTrimの目的です。
+
+
+## 主な特徴
+
+* **FFmpegの `-c copy` による無劣化カット**
+* 原本のファイルは一切変更しません
+* 被写体を検出した区間の前後に任意の余白を追加して保存可能
+* 複数の動画をまとめて処理可能
+* 1本の動画に複数回被写体が検出された場合は、最も被写体スコアが高い部分だけを自動選択して出力（全ての検出部分を出力することも可能）
+* MP4 / MTS /MOVなど多くのフォーマットに対応
+* ビデオ・音声以外のトラックも、可能な限り保持
+* 音声形式などの互換性に応じてMP4 / MOVを使い分け
+
+
 ## 動作環境
 
-### 対応OS
+## 対応OS
 
 * Windows 11
 
-### 対応フォーマット
+## 対応フォーマット
 
 * MP4
 * MOV
@@ -20,11 +112,11 @@
 * 上記以外は未確認ですが、FFmpegが対応しているフォーマットであれば処理可能な可能性があります
 
 
-### インストール方法
+## インストール方法
 
 ダウンロードしたZIPファイルを解凍し、RailVideoTrim.exeをダブルクリックするだけで起動します。
 
-### Windows SmartScreenについて
+## Windows SmartScreenについて
 
 初回起動時に「WindowsによってPCが保護されました」
 という警告が表示される場合があります。
@@ -36,7 +128,7 @@ Microsoft Defender SmartScreenによる十分な評価が
 公式サイトからダウンロードしたファイルであることを
 確認したうえで、「詳細情報」→「実行」をクリックすると起動できます。
 
-### 必要なソフトウェア
+## 必要なソフトウェア
 
 * FFmpeg
 
@@ -170,22 +262,22 @@ RailVideoTrimを気に入っていただけましたら、開発を応援して�
 
 ## System Requirements
 
-### Supported Operating Systems
+## Supported Operating Systems
 
 * Windows 11
 
-### How to Install
+## How to Install
 
 Simply unzip the downloaded ZIP file and double-click RailVideoTrim.exe to launch the program.
 
-### Supported Formats
+## Supported Formats
 
 * MP4
 * MOV
 * mts
 * Formats other than those listed above have not been verified, but they may be processable if they are supported by FFmpeg.
 
-### About Windows SmartScreen
+## About Windows SmartScreen
 
 When you launch the program for the first time, you may see a warning that says
 “Windows has protected your PC.”
@@ -197,7 +289,7 @@ enough evaluation data for it.
 After confirming that the file was downloaded from the official website,
 click “More info” → “Run” to launch the program.
 
-### Required Software
+## Required Software
 
 * FFmpeg
 
